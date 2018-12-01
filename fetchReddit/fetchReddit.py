@@ -11,6 +11,10 @@ import sys
 import requests
 import json
 
+from flask import Flask, render_template, redirect, url_for,request
+from flask import make_response
+
+app = Flask(__name__)
 lastImage = 0
 reddit = praw.Reddit('bot1')
 config = configparser.ConfigParser()
@@ -32,7 +36,6 @@ def getImages():      #fetches images
     #os.chdir(config['Bot']['downloadDirectory'])
     source = parseSources()
     print('Downloading from subreddits: ' + source)
-    imgName = 0
     errorCount = 0
     subreddit = reddit.subreddit(source)
     images = []
