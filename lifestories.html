@@ -14,7 +14,76 @@ h1, h2 {
   background: #fff;
 }
 h1 {
+  font-size: 30px<style>
+  body {
+  padding-top: 80px;
+  text-align: center;
+  font-family: monaco, monospace;
+  //background: url(http://media.giphy.com/media/Jrd9E2kuPuOYM/giphy.gif) 50%;
+  background-size: cover;
+}
+ol, ul {
+  text-align: left;
+}
+h1, h2 {
+  display: inline-block;
+  background: #fff;
+}
+h1 {
   font-size: 30px
+}
+h2 {
+  font-size: 20px;
+  text-align: left;
+}
+span {
+  background: #fd0;
+}
+</style>
+<h1>Life Stories</h1><br>
+
+<p id="demo">This where you can upload all life stories. Let others know that you are not alone.</p><br>
+<p id="maintenance">This page is maintained by cdungo.</p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSev-fPIwGxXoFd5X0WS45TbStTZ5SDu8odOaZZuQg3BuRVl4Q/viewform?usp=sf_link">Click here to share your story with others.</a><br>
+
+
+
+<h2>List of Stories</h2>
+
+<div id="container">
+<ol id="stories">
+  <li>Catharsis</li>
+  <ul id="1">
+    <li>Story1</li>
+  </ul>
+  <li>Determination</li>
+  <ul id="2">
+    <li>Story2</li>
+  </ul>
+  <li>Forgiveness</li>
+  <ul id="3">
+    <li>Story3</li>
+  </ul>
+  <li>Friendship</li>
+  <ul id="4">
+    <li>Story4</li>
+  </ul>
+  <li>Resilience</li>
+  <ul id="4">
+    <li>Story5</li>
+  </ul>
+</ol>
+</div>
+
+
+
+
+
+
+
 }
 h2 {
   font-size: 20px;
@@ -27,25 +96,20 @@ span {
 
 <p id="demo">This where you can upload all life stories. Let others know that you are not alone.</p>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#btn1").click(function(){
-        $("#stories").append("<li>Appended item</li>");
-    });
-});
-}
-</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
-<label for="avatar">Insert story:</label>
+
+<label for="story">Insert story:</label>
 <input type="file"
        id="story" name="story"
-       accept=".doc, .docx"
+       accept=".doc, .docx" required=True
        >
-<button id="btn1">Submit</button><br>
+<button id="submit">Submit</button><br>
 
 <h2>List of Stories</h2>
+
+<div id="container">
 <ol id="stories">
   <li>Catharsis</li>
   <ul id="1">
@@ -55,4 +119,20 @@ $(document).ready(function(){
   <ul id="2">
     <li>Story2</li>
   </ul>
+  <li>Forgiveness</li>
+  <ul id="3">
+    <li>Story3</li>
+  </ul>
+  <li>Friendship</li>
+  <ul id="4">
+    <li>Story4</li>
+  </ul>
 </ol>
+</div>
+
+
+
+
+
+
+
