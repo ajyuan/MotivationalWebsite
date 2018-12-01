@@ -1,1 +1,4 @@
-{"quotes":["sample quote 1", "sample quote 2", "sample quote 3"]}
+{
+    "quotes":["sample quote 1", "sample quote 2", "sample quote 3"],
+    "author":["fizz","buzz","fizzbuzz"]
+}
