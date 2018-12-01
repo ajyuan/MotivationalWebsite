@@ -1,0 +1,49 @@
+<style>
+    body {
+    padding-top: 80px;
+    
+    font-family: monaco, monospace;
+    
+    background-size: cover;
+  }
+  h1, h2 {
+    display: inline-block;
+    background: #fff;
+    text-align: center;
+  }
+  h1 {
+    font-size: 30px
+  }
+  h2 {
+    font-size: 20px;
+  }
+  span {
+    background: #fd0;
+  }
+  a:link{
+    text-decoration:none;
+    color: black;
+    
+  }
+  a:visited{
+    text-decoration:none;
+    color: black;
+  }
+  </style>
+  <body>
+    <h1>Uber Cyot</h1><br>
+  </body>
+ <script>
+   var request = new XMLHttpRequest();
+   request.open('Get','images.json',true);
+   request.onload=function(){
+     var data=JSON.parse(this.response);
+     for(var i=0;i<data.length;i++){
+       console.log(data[i].images);
+     }
+   }
+   request.send();
+ </script>
+
+  
+  
