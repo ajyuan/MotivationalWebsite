@@ -13,14 +13,15 @@ import json
 
 from flask import Flask, render_template, redirect, url_for,request
 from flask import make_response
+app = Flask(__name__,instance_relative_config=True)
 
-app = Flask(__name__)
 lastImage = 0
 reddit = praw.Reddit('bot1')
 config = configparser.ConfigParser()
+source = ''
 #commandDict = {'fetch': getImages, 'next': setDesktop}
-
-
+@app.route('/')
+@app.route('/index')
 def main():
     # Configuration
     config.read('config.ini')
@@ -30,8 +31,8 @@ def main():
     #    os.makedirs(config['Bot']['downloaddirectory'])
 
     print('fetchReddit ready')
-    getImages()
 
+@app.route('/getImages', methods=['GET'])
 def getImages():      #fetches images
     #os.chdir(config['Bot']['downloadDirectory'])
     source = parseSources()
@@ -71,7 +72,6 @@ def getImages():      #fetches images
     output = {'images':images}
     with open(config['Bot']['imageOutput'], 'w') as outfile:
         json.dump(output, outfile)
-
 
 def parseSources():
     # Creates a string representing all subreddits in config.ini

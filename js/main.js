@@ -1,26 +1,5 @@
-(function ($) {
-	"use strict";
+$(document).ready(function() {
+    $("#quote").html("ready");
 
-    jQuery(document).ready(function($){
-
-
-        $(".embed-responsive iframe").addClass("embed-responsive-item");
-        $(".carousel-inner .item:first-child").addClass("active");
-        
-        $('[data-toggle="tooltip"]').tooltip();       
-
-
-    });
-
-
-    jQuery(window).load(function(){
-
-        
-    });
-
-
-}(jQuery));	
-
-function newQuote() {
-    document.getElementById("quote").innerHTML="new";
-}
+    
+});
