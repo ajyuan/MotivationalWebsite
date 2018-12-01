@@ -65,8 +65,9 @@ def getImages():      #fetches images
                 os.chdir('..')
                 break
     #Exporting images array
-    with open('fetchedData.json', 'w') as outfile:
-        json.dump(images, outfile)
+    output = {'images':images}
+    with open(config['Bot']['imageOutput'], 'w') as outfile:
+        json.dump(output, outfile)
 
 
 def parseSources():
