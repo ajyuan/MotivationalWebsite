@@ -1,9 +1,11 @@
-var file = require('../fetchReddit/quotes.json')
+//var file = require('../fetchReddit/quotes.json')
 
 $(document).ready(function() {
-    var quotes = file.quotes;
-    var authors = file.authors;
-    
+    readTextFile('../fetchReddit/quotes.json')
+
+    //var quotes = file.quotes;
+    //var authors = file.authors;
+        
     console.log("Ready! :D")
 
     $(function(){
