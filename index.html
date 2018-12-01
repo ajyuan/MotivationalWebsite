@@ -1,4 +1,32 @@
 <!DOCTYPE html>
+<style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
+}
+</style>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -11,11 +39,18 @@
         <link href="css/responsive.css" rel="stylesheet">
     </head>
     <body>
-        
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lifestories.html">Life Stories</a></li>
+                    <li><a href="MentalHealth.html">Mental Health</a></li>
+                    <li><a href="productivity.html">Productivity</a></li>
+                    <li><a href="Destress.html">Destress</a></li>
+
+            </ul>    
         <h id="quote"></h>
         <p id="author"></p>
         <input id="quoteButton" type="button" value="new quote"/>
-
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
