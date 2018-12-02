@@ -1,9 +1,8 @@
 <head>
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
 <style>
     body {
-    padding-top: 80px;
-    margin: 0;
-    max-width:43%;
     font-family: monaco, monospace;
     
     background-size: cover;
@@ -37,7 +36,7 @@
 }
 
 /* Style the list items */
-ul li {
+.todo1{
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -52,19 +51,19 @@ ul li {
   -ms-user-select: none;
   user-select: none;
 }
-
-  ul li:nth-child(odd) {
+.todo1:nth-child(odd){
   background: #f9f9f9;
 }
-ul li:hover {
+
+.todo1:hover {
   background: #ddd;
 }
-ul li.checked {
+.todo1:checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
-ul li.checked::before {
+.todo1:checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -76,6 +75,7 @@ ul li.checked::before {
   height: 15px;
   width: 7px;
 }
+
 .close {
   position: absolute;
   right: 0;
@@ -123,24 +123,7 @@ input {
   float: left;
   font-size: 16px;
 }
-li {
-    float: left;
-}
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-.active {
-    background-color: #4CAF50;
-}
   </style>
   <body>
     <ul class="navbar">
@@ -149,7 +132,6 @@ li a:hover {
       <li id="navbutton"><a href="MentalHealth.html">Mental Health</a></li>
       <li id="navbutton"><a href="productivity.html">Productivity</a></li>
       <li id="navbutton"><a href="Destress.html">Destress</a></li>
-
     </ul> 
   <h1>Productivity</h1><br>
   <h2>Pomodoro</h2>
@@ -164,11 +146,11 @@ li a:hover {
  </p>
  <p id="break">Break Timer will appear here</p>
  <h2>To Do List</h2>
- <div id="myDIV" class="header">
+ <div id="myDIV" class="header" style="width:45%">
         <input type="text" id="myInput" placeholder="Title...">
         <span onclick="newElement()" class="addBtn">Add</span>
       </div>
-      <ul id="myUL">
+      <ul id="myUL" class="todo1" style="width:45%">
  </ul>
   <script>
   var hasStarted=false;
@@ -242,7 +224,8 @@ if (distance < 0) {
 }
 }, 1000);
 };
-document.getElemen
+
+// Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
