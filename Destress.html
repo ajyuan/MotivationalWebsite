@@ -1,95 +1,39 @@
-<style>
-    body {
-    padding-top: 80px;
-    
-    font-family: monaco, monospace;
-    
-    background-size: cover;
-  }
-  h1, h2 {
-    display: inline-block;
-    background: #fff;
-    text-align: center;
-  }
-  h1 {
-    font-size: 30px
-  }
-  h2 {
-    font-size: 20px;
-  }
-  span {
-    background: #fd0;
-  }
-  a:link{
-    text-decoration:none;
-    color: black;
-    
-  }
-  a:visited{
-    text-decoration:none;
-    color: black;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
+<head>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
 
-  li {
-    float: left;
-}
+<body>
+  <ul class="navbar">
+    <li id="navbutton"><a href="index.html">Home</a></li>
+    <li id="navbutton"><a href="lifestories.html">Life Stories</a></li>
+    <li id="navbutton"><a href="MentalHealth.html">Mental Health</a></li>
+    <li id="navbutton"><a href="productivity.html">Productivity</a></li>
+    <li id="navbutton"><a href="Destress.html">Destress</a></li>
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-.active {
-    background-color: #4CAF50;
-}
-  </style>
-  <body>
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lifestories.html">Life Stories</a></li>
-          <li><a href="MentalHealth.html">Mental Health</a></li>
-          <li><a href="productivity.html">Productivity</a></li>
-          <li><a href="Destress.html">Destress</a></li>
-
-  </ul>   
-    <h1>Uber Cyot</h1><br>
-    <p>
+  </ul>
+  <h1>Uber Cyot</h1><br>
+  <p>
     <img id="imageid" src="img_1.jpg">
     <button type="button" id="Next">Next</button>
-    </p>
-  </body>
- <script>
-   document.getElementById('Next').onclick=function(){
-     alert("Function called");
-    var random=Math.floor(Math.random()*3)+1;
-     var name= "img_"+random+".jpg";
-     console.log(name);
-     document.getElementById(imageid).src="MotivationalWebsitename"+"/"+name;
-   }
-  
-   var request = new XMLHttpRequest();
-   request.open('Get','images.json',true);
-   request.onload=function(){
-     var data=JSON.parse(this.response);
-     for(var i=0;i<data.length;i++){
-       console.log(data[i].images);
-     }
-   }
-   request.send();
- </script>
+  </p>
+</body>
+<script>
+  document.getElementById('Next').onclick = function () {
+    alert("Function called");
+    var random = Math.floor(Math.random() * 3) + 1;
+    var name = "img_" + random + ".jpg";
+    console.log(name);
+    document.getElementById(imageid).src = "MotivationalWebsitename" + "/" + name;
+  }
 
-  
-  
+  var request = new XMLHttpRequest();
+  request.open('Get', 'images.json', true);
+  request.onload = function () {
+    var data = JSON.parse(this.response);
+    for (var i = 0; i < data.length; i++) {
+      console.log(data[i].images);
+    }
+  }
+  request.send();
+</script>

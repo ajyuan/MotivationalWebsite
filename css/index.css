@@ -1,0 +1,10 @@
+#quote{
+    text-align: center;
+    font-size: 60pt;
+}
+
+#author{
+    font-size: 20pt;
+    width: 90%;
+    text-align: right;
+}
