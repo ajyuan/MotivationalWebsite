@@ -58,6 +58,17 @@ li a:hover {
     background-color: #4CAF50;
 }
 
+#quote{
+    text-align: center;
+    font-size: 60pt;
+}
+
+#author{
+    font-size: 20pt;
+    width: 90%;
+    text-align: right;
+}
+
 a:hover { text-decoration: none }
 
 /* Remove Chrome Input Field's Unwanted Yellow Background Color */
