@@ -16,7 +16,7 @@
   </ul>
   <h1>Cute Animals</h1><br>
   <p>
-    <img id="imageid" src="img_1.jpg">
+    <img id="imageid" src="images/img_1.jpg">
     <br><button type="button" id="Next">Next</button></br>
   </p>
 </body>
@@ -25,7 +25,7 @@
     var random = Math.floor(Math.random() * 7) + 1;
     var name = "img_" + random + ".jpg";
     console.log(name);
-    document.getElementById('imageid').src = name;
+    document.getElementById('imageid').src = "images/"+name;
   }
 
   var request = new XMLHttpRequest();
