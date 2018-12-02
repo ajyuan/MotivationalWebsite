@@ -1,6 +1,8 @@
+
 <head>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/destress.css">
 </head>
 
 <body>
@@ -12,19 +14,18 @@
     <li id="navbutton"><a href="Destress.html">Destress</a></li>
 
   </ul>
-  <h1>Uber Cyot</h1><br>
+  <h1>Cute Animals</h1><br>
   <p>
     <img id="imageid" src="img_1.jpg">
-    <button type="button" id="Next">Next</button>
+    <br><button type="button" id="Next">Next</button></br>
   </p>
 </body>
 <script>
   document.getElementById('Next').onclick = function () {
-    alert("Function called");
-    var random = Math.floor(Math.random() * 3) + 1;
+    var random = Math.floor(Math.random() * 7) + 1;
     var name = "img_" + random + ".jpg";
     console.log(name);
-    document.getElementById(imageid).src = "MotivationalWebsitename" + "/" + name;
+    document.getElementById('imageid').src = name;
   }
 
   var request = new XMLHttpRequest();
