@@ -29,6 +29,14 @@
     text-decoration:none;
     color: black;
   }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
   li {
     float: left;
 }
@@ -58,8 +66,20 @@ li a:hover {
 
   </ul>   
     <h1>Uber Cyot</h1><br>
+    <p>
+    <img id="imageid" src="img_1.jpg">
+    <button type="button" id="Next">Next</button>
+    </p>
   </body>
  <script>
+   document.getElementById('Next').onclick=function(){
+     alert("Function called");
+    var random=Math.floor(Math.random()*3)+1;
+     var name= "img_"+random+".jpg";
+     console.log(name);
+     document.getElementById(imageid).src="MotivationalWebsitename"+"/"+name;
+   }
+  
    var request = new XMLHttpRequest();
    request.open('Get','images.json',true);
    request.onload=function(){
