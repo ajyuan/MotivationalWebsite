@@ -123,9 +123,34 @@ input {
   float: left;
   font-size: 16px;
 }
+li {
+    float: left;
+}
 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
+}
   </style>
   <body>
+      <ul>
+          <li style="float: left;"><a href="index.html">Home</a></li>
+          <li style="float: left;"><a href="lifestories.html">Life Stories</a></li>
+          <li style="float: left;"><a href="MentalHealth.html">Mental Health</a></li>
+          <li style="float: left;"><a href="productivity.html">Productivity</a></li>
+          <li style="float: left;"><a href="Destress.html">Destress</a></li>
+
+  </ul>   
   <h1>Productivity</h1><br>
   <h2>Pomodoro</h2>
   <h4>The Pomodoro techinique consists of working in 25 minute intervals then taking a 15-30 minute break every four 25 minute intervals and 3-5 minute breaks the rest</h4>
@@ -217,7 +242,7 @@ if (distance < 0) {
 }
 }, 1000);
 };
-
+document.getElemen
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
