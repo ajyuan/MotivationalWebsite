@@ -50,6 +50,7 @@ def getImages():      #fetches images
 
             images.append(submission.url)
             """
+            #Downloads the image (removed, place image url in json file instead)
             dl.urlretrieve(submission.url, str(imgName) + '.png', reporthook=progressDisplay)
             errorCount = 0
             print('\n')
