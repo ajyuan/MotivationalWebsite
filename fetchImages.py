@@ -18,13 +18,13 @@ config = configparser.ConfigParser()
 
 def main():
     # Configuration
-    config.read('config.ini')
+    config.read('config\config.ini')
 
     # Create image directory if it doesnt exist
     if not os.path.exists(config['Bot']['downloaddirectory']):
         os.makedirs(config['Bot']['downloaddirectory'])
 
-    print('wpbot ready')
+    print('image fetch ready')
     #getInput()
     getImages()
 
@@ -46,7 +46,7 @@ def getImages():
     os.chdir(config['Bot']['downloadDirectory'])
     source = parseSources()
     print('Downloading from subreddits: ' + source)
-    imgName = 0
+    imgName = 1
     errorCount = 0
     subreddit = reddit.subreddit(source)
     for submission in subreddit.top('month', limit=int(config['Bot']['maxImages'])):

@@ -1,15 +1,21 @@
-//var file = require('../fetchReddit/quotes.json')
+$(document).ready(function () {
+    var quotes = [];
+    var authors = [];
 
-$(document).ready(function() {
-    //readTextFile('../fetchReddit/quotes.json')
+    function readJson() {
+        return $.getJSON('quotes.json');
+    }
 
-    var quotes = file.quotes;
-    var authors = file.authors;
-        
+    readJson().done(function (json) {
+        $.each(json, function(key, value) {
+            quotes[key] = {quotes: value.quotes};
+        });
+    });
+       
     console.log("Ready! :D")
 
-    $(function(){
-        $("#quoteButton").click(function() {
+    $(function () {
+        $("#quoteButton").click(function () {
             quoteNum = Math.random();
             $('#quote').html(quotes[0]);
             $('#author').html(authors[0]);
